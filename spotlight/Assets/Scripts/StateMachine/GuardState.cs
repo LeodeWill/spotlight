@@ -7,5 +7,4 @@ public interface GuardState {
 
     void OnEnter(Watcher guard, Detectable target);
 
-    void OnExit(Watcher guard, Detectable target);
 }

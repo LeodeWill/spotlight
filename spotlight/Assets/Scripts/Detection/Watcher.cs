@@ -7,12 +7,14 @@ public class Watcher : MonoBehaviour {
     public Detector radar;
     public GuardState state;
 
-    GuardState calmState;
-    Thief target = null;
+    [HideInInspector] public GuardState calmState, curiousState;
+    [HideInInspector] public Thief target = null;
 
     public bool alert = false;
 
     public float chaseDelay = 3f, loseRate = 0.1f;
+
+    public float detectionDelay = 2f;
 
     private void Awake() {
         radar.watcher = this;
